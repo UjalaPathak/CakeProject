@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col s8 offset-s2">
+        <div class="card">
+            <div class="sm-jumbotron center-align">
+                <h2>User Registration</h2>
+            </div><br><br>
+            <form class="col s12 white" autocomplete="off" #userRegistrationForm="ngForm" (ngSubmit) = "OnSubmit(userRegistrationForm)">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="text" name="Name" #Name = "ngModel" [(ngModel)] = "user.Name" required>
+                        <label>Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" name="Username" #Username = "ngModel" [(ngModel)] = "user.Username" required>
+                        <label>Username</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="email" name="Email" #Email = "ngModel" [(ngModel)] = "user.Email" [pattern] = "emailPattern" required>
+                        <label>Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="password" name="Password" #Password = "ngModel" [(ngModel)] = "user.Password" minlength="5" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="password" name="RePassword" #RePassword = "ngModel" [(ngModel)] = "user.RePassword" minlength="5" required>
+                        <label>Retype Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <button  type="submit" [disabled] = "!userRegistrationForm.valid" class="btn-large btn-submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

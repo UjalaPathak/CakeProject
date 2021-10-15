@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col s8 offset-s2">
+        <div class="card">
+            <div class="sm-jumbotron center-align">
+                <h2>Cake</h2>
+            </div><br><br>
+            <form class="col s12 white" autocomplete="off" #cakeForm="ngForm" (ngSubmit) = "OnSubmit(cakeForm)">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="file" name="cakepicture"  #cakepicture = "ngModel" [(ngModel)] = "cake.cakepicture" required>
+                        <!-- <input type="text" name="cakepicture" #cakepicture = "ngModel" [(ngModel)] = "cake.cakepicture" required> -->
+                        <!-- <label>CakePicture</label> -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="text" name="cakeweight" #cakeweight = "ngModel" [(ngModel)] = "cake.cakeweight" required>
+                        <label>Cake Weight</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="number" name="price" #price = "ngModel" [(ngModel)] = "cake.price" required>
+                        <label>Price</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="text" name="cakename" #cakename = "ngModel" [(ngModel)] = "cake.cakename" required>
+                        <label>Cake Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" name="shape" #shape = "ngModel" [(ngModel)] = "cake.shape" required>
+                        <label>Shape</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <button  type="submit" [disabled] = "!cakeForm.valid" class="btn-large btn-submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
