@@ -70,7 +70,7 @@ orders:Ordercake={
       {
         this.router.navigate(['/payment']);
       });
-      this.toastr.success('Record inserted succussfully', 'Cake table');
+      this.toastr.success('Make payment to complete your order!!!', 'Payment');
   }
 
 }

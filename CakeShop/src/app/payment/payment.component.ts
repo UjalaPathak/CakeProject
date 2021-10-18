@@ -58,9 +58,9 @@ addpay:Payment={
   {
     this.paymentService.postPayment(oc).subscribe(data=>
       {
-        this.router.navigate(['/payment']);
+        this.router.navigate(['/home']);
       });
-      this.toastr.success('Record inserted succussfully', 'Cake table');
+      this.toastr.success('', 'Payment done');
   }
 
   // OnSubmit(form : NgForm)

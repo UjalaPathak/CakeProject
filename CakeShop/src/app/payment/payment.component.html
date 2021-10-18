@@ -23,17 +23,17 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input type="text" name="CardNumber" #CardNumber = "ngModel" [(ngModel)] = "addpay.CardNumber">
+                        <input type="password" name="CardNumber" #CardNumber = "ngModel" [(ngModel)] = "addpay.CardNumber">
                         <label>Card Number</label>
                     </div>
                     <div class="input-field col s6">
-                        <input type="text" name="CVV" #CVV = "ngModel" [(ngModel)] = "addpay.CVV" minlength="3" maxlength="3" required>
+                        <input type="password" name="CVV" #CVV = "ngModel" [(ngModel)] = "addpay.CVV" minlength="3" maxlength="3" required>
                         <label>CVV</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <button  type="submit" routerLink = "/home" [disabled] = "!paymentForm.valid" class="btn-large btn-submit">Submit</button>
+                        <button  type="submit" [disabled] = "!paymentForm.valid" class="btn-large btn-submit">Submit</button>
                     </div>
                 </div>
             </form>

@@ -11,9 +11,9 @@ export class OrdercakeService {
  
   constructor(private http: HttpClient) { }
 
-  postOrder(ord:Ordercake):Observable<any>
+  postOrder(order:Ordercake):Observable<any>
   {
-    return this.http.post<any>(this.req,ord,{
+    return this.http.post<any>(this.req,order,{
       headers:new HttpHeaders({
         'Content-Type':'application/json;charset=UTF-8',
         'Access-Control-Allow-Origin':'*',
