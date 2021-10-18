@@ -6,13 +6,16 @@
     <mat-divider></mat-divider>
     <h2 matSubheader class="mt-2"></h2>
     <a mat-list-item routerLink="/home" routerLinkActive="list-item-active">
-        <mat-icon>home</mat-icon> Home
+        <mat-icon>home</mat-icon> View Cakes
     </a> 
-    <a mat-list-item routerLink="/dashboard" routerLinkActive="list-item-active">
+    <a mat-list-item routerLink="/home" *ngIf="IsAuthendicated()" (click) = "Logout()">
+        <mat-icon>exit_to_app</mat-icon> Logout
+    </a> 
+    <!-- <a mat-list-item routerLink="/dashboard" routerLinkActive="list-item-active">
         <mat-icon>dashboard</mat-icon> Dashboard
     </a> 
     <a mat-list-item> <mat-icon>edit</mat-icon>Link 3</a>
     <a mat-list-item> <mat-icon>edit</mat-icon>Link 4</a>
     <a mat-list-item> <mat-icon>edit</mat-icon>Link 5</a>
-    <a mat-list-item> <mat-icon>edit</mat-icon>Link 6</a>
+    <a mat-list-item> <mat-icon>edit</mat-icon>Link 6</a> -->
 </mat-nav-list>

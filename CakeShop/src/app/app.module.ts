@@ -14,6 +14,7 @@ import {MatListModule} from '@angular/material/list';
 import { RouterModule, Routes } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
+import { ToastrModule } from 'ngx-toastr';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
@@ -23,6 +24,16 @@ import { FormsModule } from '@angular/forms';
 import { UserregisterService } from './service/userregister.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AdmincakeComponent } from './admincake/admincake.component';
+import { JwtModule } from '@auth0/angular-jwt';
+import { LoginComponent } from './login/login.component';
+import { CakecategoryComponent } from './cakecategory/cakecategory.component';
+import { OrdercakeComponent } from './ordercake/ordercake.component';
+import { PaymentComponent } from './payment/payment.component';
+
+
+export function tokenGet() {
+  return localStorage.getItem("jwt");
+}
 
 const routes: Routes = [
 ];
@@ -35,7 +46,11 @@ const routes: Routes = [
     HomeComponent,
     DashboardComponent,
     RegisterComponent,
-    AdmincakeComponent
+    AdmincakeComponent,
+    LoginComponent,
+    CakecategoryComponent,
+    OrdercakeComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +67,15 @@ const routes: Routes = [
     MatCardModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    ToastrModule.forRoot(),
+    RouterModule.forRoot(routes),
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGet,
+        allowedDomains: ["*"],
+        disallowedRoutes: []
+      }
+    })
   ],
   providers: [UserregisterService],
   bootstrap: [AppComponent]

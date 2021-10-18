@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col s8 offset-s2">
+        <div class="card">
+            <div class="sm-jumbotron center-align">
+                <h2>Payment</h2>
+            </div><br><br>
+            <form class="col s12 white" autocomplete="off" #paymentForm="ngForm" (ngSubmit) = "post_api(paymentForm.value)">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="number" name="Userid" #Userid = "ngModel" [(ngModel)] = "addpay.Userid" required>
+                        <label>UserId</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" name="Username" #Username = "ngModel" [(ngModel)] = "addpay.Username" required>
+                        <label>Username</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" name="CardHolderName" #CardHolderName = "ngModel" [(ngModel)] = "addpay.CardHolderName" required>
+                        <label>Card Holder Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="text" name="CardNumber" #CardNumber = "ngModel" [(ngModel)] = "addpay.CardNumber">
+                        <label>Card Number</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" name="CVV" #CVV = "ngModel" [(ngModel)] = "addpay.CVV" minlength="3" maxlength="3" required>
+                        <label>CVV</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <button  type="submit" routerLink = "/home" [disabled] = "!paymentForm.valid" class="btn-large btn-submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

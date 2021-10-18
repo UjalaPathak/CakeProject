@@ -7,8 +7,10 @@
         <div class="row mr-2 ml-auto">
             <ul>
                 <li>
-                    <a routerLink = "/cake" mat-button style="font-size: large;">Cake</a>
-                    <a routerLink = "/register" mat-button style="font-size: large;">Register</a>
+                    <a routerLink = "/cake" *ngIf="IsAdmin()"  mat-button style="font-size: large;">Cake</a>
+                    <a routerLink = "/home" *ngIf="IsAuthendicated()" mat-button style="font-size: large;" (click) = "Logout()">Logout</a>
+                    <a routerLink = "/login" *ngIf="!IsAuthendicated()" mat-button style="font-size: large;">Login</a>
+                    <a routerLink = "/register" *ngIf="!IsAuthendicated()" mat-button style="font-size: large;">Register</a>
                     <!-- <span routerLink = '/register' style="margin-right: 10px; cursor: pointer; padding-top: 20px;">Register</span> -->
                     <!-- <button mat-button [matMenuTriggerFor] = "menu" class="user mt-2 d-flex align-items-center">
                         <img src="../../assets/images/user.png" alt="" class="user-image mr-1 p-2" />

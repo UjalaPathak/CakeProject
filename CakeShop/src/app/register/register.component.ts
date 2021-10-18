@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { Userregister } from '../models/userregister.model';
 import { UserregisterService } from '../service/userregister.service';
 
@@ -12,7 +13,8 @@ export class RegisterComponent implements OnInit {
   user!: Userregister;
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
 
-  constructor(private userService: UserregisterService) { }
+  constructor(private userService: UserregisterService,
+    private toastr : ToastrService) { }
 
   ngOnInit() {
     this.resetForm();
@@ -39,5 +41,6 @@ export class RegisterComponent implements OnInit {
           this.resetForm(form);
     });
     form.reset();
+    this.toastr.success('Registered Successfully', 'User Register');
   }
 }

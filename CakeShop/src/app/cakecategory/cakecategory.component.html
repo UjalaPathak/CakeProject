@@ -1,0 +1,76 @@
+<br>
+
+<mat-toolbar style="width: fit-content; justify-content: center; margin: 0 auto; background-color: white; border: 2px solid black; border-radius: 10px;">
+    <p style="font-size: 35px; font-family: Jokerman; color: rgb(35, 35, 119);">Yummyyyy!!!!!</p>
+  </mat-toolbar>
+
+
+  <div class="content" >
+    <div fxLayout="row wrap" fxLayoutGap="16px grid"  >
+      <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let item of cakecategory" style="margin-left: 1px;">
+        <mat-card class="mat-elevation-z4" *ngIf = "IsCategory(item.cakename)">
+          <img mat-card-image src="{{item.cakepicture}}">
+          <mat-card-content>
+            <h2>₹ {{item.price}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button routerLink="/order" class="btn btn-primary" style="background-color:rgb(84, 210, 233) ;">Buy Now</button></h2>
+            <!-- <h1>{{item.cakename}}</h1> -->
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <!-- <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%">
+        <mat-card class="mat-elevation-z4">
+          <img mat-card-image src="../../assets/images/redvelvetcake.jpg">
+          <mat-card-content>
+            <h2>Red Velvet Cake</h2>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%">
+        <mat-card class="mat-elevation-z4">
+          <img mat-card-image src="../../assets/images/strawberrycake.jpg">
+          <mat-card-content>
+            <h2>Strawberry Cake</h2>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%">
+        <mat-card class="mat-elevation-z4">
+          <img mat-card-image src="../../assets/images/blueberrycake.png">
+          <mat-card-content>
+            <h2>Blueberry Cake</h2>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%">
+        <mat-card class="mat-elevation-z4">
+          <img mat-card-image src="../../assets/images/butterscotchcake.jpg">
+          <mat-card-content>
+            <h2>Butterscotch Cake</h2>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%">
+        <mat-card class="mat-elevation-z4">
+          <img mat-card-image src="../../assets/images/blackforestcake.jpg">
+          <mat-card-content>
+            <h2>BlackForest Cake</h2>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%">
+        <mat-card class="mat-elevation-z4">
+          <img mat-card-image src="../../assets/images/oreocakes.jpg">
+          <mat-card-content>
+            <h2>Oreo Cake</h2>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%">
+        <mat-card class="mat-elevation-z4">
+          <img mat-card-image src="../../assets/images/trufflecake.jpg">
+          <mat-card-content>
+            <h2>Truffle Cake</h2>
+          </mat-card-content>
+        </mat-card>
+      </div> -->
+    </div>
+  </div>

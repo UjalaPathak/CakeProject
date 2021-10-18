@@ -8,7 +8,7 @@ div.card
 
 div.sm-jumbotron{
     margin: 0px;
-    padding: 2rem;
+    padding: 1rem;
     background-color: #19283d;
     color: #fff;
     border-radius: 10px;
@@ -27,3 +27,19 @@ button.btn-submit:focus,button.btn-submit:hover{
     border-bottom-color : #e91e63 !important;
     box-shadow: 0 1px 0 0 #e91e63 !important;
 } 
+
+table
+{
+    border: 2px solid black;
+    font-size: 15px;
+}
+
+.alist
+{
+    margin-right: 160px; 
+    cursor: pointer; 
+    font-weight: 40px; 
+    font-size: 30px; 
+    text-decoration: underline;
+    color: black;
+}

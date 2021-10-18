@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Component({
   selector: 'app-header',
@@ -9,13 +10,42 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   @Output() toggleSidebarForMe: EventEmitter<any> = new EventEmitter();
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private jwtHelper:JwtHelperService) { }
 
   ngOnInit(): void {
   }
 
   toggleSidebar() {
     this.toggleSidebarForMe.emit();
+  }
+
+  IsAuthendicated():boolean{
+    const token:string|null=localStorage.getItem("jwt");
+    if(token && !this.jwtHelper.isTokenExpired(token) && token!=null)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  }
+  Logout():void{
+    localStorage.clear();
+    this.router.navigate(['/home']);
+  }
+
+  IsAdmin():boolean
+  {
+    if(localStorage.getItem("Username") == "Admin")
+    {
+      // this.router.navigate(['/cake']);
+      return true;
+    }
+    else
+    {
+      return false;
+    }
   }
 
 }

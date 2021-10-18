@@ -1,4 +1,5 @@
 export class Admincake {
+    cakeid!: number;
     cakepicture!: string;
     cakeweight!: string;
     price!: number;
