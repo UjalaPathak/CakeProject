@@ -69,8 +69,8 @@ orders:Ordercake={
     this.orderService.postOrder(oc).subscribe(data=>
       {
         this.router.navigate(['/payment']);
+        this.toastr.success('Make payment to complete your order!!!', '');
       });
-      this.toastr.success('Make payment to complete your order!!!', 'Payment');
   }
 
 }

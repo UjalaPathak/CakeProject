@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col s8 offset-s2"><br>
+        <div class="card">
+            <div class="sm-jumbotron center-align">
+                <h2 style="margin-top: 20px;">Update Cake</h2>
+            </div><br><br>
+            <form class="col s12 white" autocomplete="off" #upcakeForm="ngForm" (ngSubmit) = "put_api(upcakeForm.value,user.cakeid)">
+                <input type="file" name="cakeid"   [(ngModel)] = "user.cakeid" hidden>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="file" name="cakepicture"  [(ngModel)] = "user.cakepicture" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="text" name="cakeweight" #cakeweight = "ngModel" [(ngModel)] = "user.cakeweight" required>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="number" name="price" #price = "ngModel" [(ngModel)] = "user.price" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="text" name="cakename" #cakename = "ngModel" [(ngModel)] = "user.cakename" required>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" name="shape" #shape = "ngModel" [(ngModel)] = "user.shape" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <button  type="submit" class="btn-large btn-submit" >Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

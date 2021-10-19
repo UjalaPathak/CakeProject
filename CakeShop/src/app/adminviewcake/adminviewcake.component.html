@@ -1,0 +1,36 @@
+<br>
+<div class="row">
+    <a routerLink="/cake/addcake" >
+        <h1 class="alist text-center" style="margin-left: 140px;">Add Cake List</h1>
+    </a>
+    <div class="col s8 offset-s0"><br>
+        <div class="container">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>CakeId</th>
+                        <th>Cake Picture</th>
+                        <th>Cakeweight</th>
+                        <th>Cake price</th>
+                        <th>Cake name</th>
+                        <th>Cake shape</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+            <tbody>
+                <tr *ngFor="let item of admincake">
+                    <td>{{item.cakeid}}</td>
+                    <td>{{item.cakepicture}}</td>
+                    <td>{{item.cakeweight}}</td>
+                    <td>{{item.price}}</td>
+                    <td> {{item.cakename}}</td>
+                    <td>{{item.shape}}</td>
+                    <td><button routerLink = "/cake/editcake/{{item.cakeid}}" class="btn btn-sm btn-outline-danger"><mat-icon>edit</mat-icon></button></td>
+                    <td><button (click)="delete_api(item.cakeid)" class="btn btn-sm btn-outline-danger"><mat-icon>delete</mat-icon></button></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>

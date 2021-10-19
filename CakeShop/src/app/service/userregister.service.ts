@@ -10,7 +10,7 @@ import { Userregister } from '../models/userregister.model';
 export class UserregisterService {
   req:string="https://localhost:44366/api/Authorization/Registration";
   readonly rootUrl = 'https://localhost:44381';
-  // https://localhost:44366/api/Authorization/Registration
+
   constructor(private http : HttpClient) { }
 
   registerUser(user : Userregister)
