@@ -57,8 +57,8 @@ export class AdminviewcakeComponent implements OnInit {
   {
     this.cakeService.deleteCake(id).subscribe(data=>
       {
-        this.router.navigate(['/cake/viewcake']);
-        this.toastr.success('Record updated succussfully');
+        this.router.navigate(['/cake/addcake']);
+        this.toastr.success('Record deleted succussfully');
       });
   }
 

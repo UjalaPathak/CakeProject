@@ -23,7 +23,6 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
 import { UserregisterService } from './service/userregister.service';
 import { HttpClientModule } from '@angular/common/http';
-import { AdmincakeComponent } from './admincake/admincake.component';
 import { JwtModule } from '@auth0/angular-jwt';
 import { LoginComponent } from './login/login.component';
 import { CakecategoryComponent } from './cakecategory/cakecategory.component';
@@ -32,6 +31,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { AddcakeComponent } from './addcake/addcake.component';
 import { AdminviewcakeComponent } from './adminviewcake/adminviewcake.component';
 import { AdmineditcakeComponent } from './admineditcake/admineditcake.component';
+import { OrderviewComponent } from './orderview/orderview.component';
 
 
 export function tokenGet() {
@@ -49,14 +49,14 @@ const routes: Routes = [
     HomeComponent,
     DashboardComponent,
     RegisterComponent,
-    AdmincakeComponent,
     LoginComponent,
     CakecategoryComponent,
     OrdercakeComponent,
     PaymentComponent,
     AddcakeComponent,
     AdminviewcakeComponent,
-    AdmineditcakeComponent
+    AdmineditcakeComponent,
+    OrderviewComponent
   ],
   imports: [
     BrowserModule,

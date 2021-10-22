@@ -3,6 +3,8 @@ import { NgForm } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { Userregister } from '../models/userregister.model';
 import { UserregisterService } from '../service/userregister.service';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-register',
@@ -13,8 +15,7 @@ export class RegisterComponent implements OnInit {
   user!: Userregister;
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
 
-  constructor(private userService: UserregisterService,
-    private toastr : ToastrService) { }
+  constructor(private userService: UserregisterService, private router: Router, private toastr : ToastrService) { }
 
   ngOnInit() {
     this.resetForm();
@@ -38,8 +39,9 @@ export class RegisterComponent implements OnInit {
     this.userService.registerUser(form.value)
       .subscribe((data:any) => {
         if(data.Succeeded == true)
-          this.resetForm(form);
+          this.resetForm(form);          
     });
+    this.router.navigate(['/login']);
     form.reset();
     this.toastr.success('Registered Successfully', 'User Register');
   }

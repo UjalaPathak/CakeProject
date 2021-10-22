@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Payment } from '../models/payment.model';
 import { PaymentService } from '../service/payment.service';
@@ -34,9 +34,10 @@ addpay:Payment={
   CVV:""
 };
 
-  constructor(private paymentService: PaymentService, private toastr : ToastrService, private router: Router, private jwtHelper:JwtHelperService) { }
+  constructor(private paymentService: PaymentService, private toastr : ToastrService, private router: Router, private jwtHelper:JwtHelperService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.addpay.Userid = Number(this.route.snapshot.paramMap.get('userid'));
     this.resetForm();
   }
 
@@ -59,17 +60,9 @@ addpay:Payment={
     this.paymentService.postPayment(oc).subscribe(data=>
       {
         this.router.navigate(['/home']);
+        // this.toastr.success('', 'Payment done');
       });
+      this.router.navigate(['/home']);
       this.toastr.success('', 'Payment done');
   }
-
-  // OnSubmit(form : NgForm)
-  // {
-  //   this.paymentService.payment(form.value)
-  //     .subscribe((data:any) => {
-  //       if(data.Succeeded == true)
-  //         this.resetForm(form);
-  //   });
-  //   form.reset();
-  // }
 }

@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" *ngIf = " IsAuthendicated()">
     <div class="col s8 offset-s2">
         <div class="card">
             <div class="sm-jumbotron center-align">
@@ -6,51 +6,53 @@
             </div><br><br>
             <form class="col s12 white" autocomplete="off" #orderForm="ngForm" (ngSubmit) = "post_api(orderForm.value)">
                 <div class="row">
-                    <div class="input-field col s6">
-                        <input type="number" name="cakeId" #cakeId = "ngModel"  [(ngModel)] = "orders.cakeid" required>
-                        <label>CakeId</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input type="text" name="Name" #Name = "ngModel"  [(ngModel)] = "orders.Name" required>
+                     <input type="number" name="cakeId" #cakeId = "ngModel"  [(ngModel)] = "orders.cakeid" hidden required>
+                    <div class="input-field col s12">
+                        <input type="text" name="name" #Name = "ngModel"  [(ngModel)] = "orders.name" required>
                         <label>Name</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input type="text" name="Address" #Address = "ngModel"  [(ngModel)] = "orders.Address" required>
+                        <input type="text" name="address" #Address = "ngModel"  [(ngModel)] = "orders.address" required>
                         <label>Address</label>
                     </div>
                     <div class="input-field col s6">
-                        <input type="text" name="City" #City = "ngModel"  [(ngModel)] = "orders.City" required>
+                        <input type="text" name="city" #City = "ngModel"  [(ngModel)] = "orders.city" required>
                         <label>City</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input type="text" name="State" #State = "ngModel" [(ngModel)] = "orders.State" required>
+                        <input type="text" name="State" #State = "ngModel" [(ngModel)] = "orders.state" required>
                         <label>State</label>
                     </div>
                     <div class="input-field col s6">
-                        <input type="text" name="Country" #Country = "ngModel" [(ngModel)] = "orders.Country" required>
+                        <input type="text" name="country" #Country = "ngModel" [(ngModel)] = "orders.country" required>
                         <label>Country</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input type="text" name="Pincode" #Pincode = "ngModel" [(ngModel)] = "orders.Pincode" required>
+                        <input type="text" name="pincode" #Pincode = "ngModel" [(ngModel)] = "orders.pincode" required>
                         <label>Pincode</label>
                     </div>
                     <div class="input-field col s6">
-                        <input type="text" name="Phoneno" #Phoneno = "ngModel" [(ngModel)] = "orders.Phoneno" required>
+                        <input type="text" name="phoneno" #Phoneno = "ngModel" [(ngModel)] = "orders.phoneno" required>
                         <label>Phone Number</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <button [disabled] = "!orderForm.valid" type="submit" class="btn-large btn-submit">Submit</button>
+                        <button [disabled] = "!orderForm.valid" type="submit" routerLink="/order/{{orders.cakeid}}" class="btn-large btn-submit">Submit</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
+</div>
+<div class="row" style="margin-top: 25%; margin-left: 20%;">
+    <div class="col s8 offset-s2">
+        <h1 style="font-size: 35px; color: #2c3344;">Please login first</h1>
+        </div>
 </div>

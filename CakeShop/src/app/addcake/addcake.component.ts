@@ -57,7 +57,7 @@ export class AddcakeComponent implements OnInit {
   {
     this.cakeService.postCake(ac).subscribe(data=>
       {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/cake/viewcake']);
       });
       this.toastr.success('Record inserted succussfully', 'Cake');
   }

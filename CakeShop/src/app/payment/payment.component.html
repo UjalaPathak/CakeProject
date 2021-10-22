@@ -6,11 +6,8 @@
             </div><br><br>
             <form class="col s12 white" autocomplete="off" #paymentForm="ngForm" (ngSubmit) = "post_api(paymentForm.value)">
                 <div class="row">
-                    <div class="input-field col s6">
-                        <input type="number" name="Userid" #Userid = "ngModel" [(ngModel)] = "addpay.Userid" required>
-                        <label>UserId</label>
-                    </div>
-                    <div class="input-field col s6">
+                        <input type="number" name="Userid" #Userid = "ngModel" [(ngModel)] = "addpay.Userid" hidden required>
+                    <div class="input-field col s12">
                         <input type="text" name="Username" #Username = "ngModel" [(ngModel)] = "addpay.Username" required>
                         <label>Username</label>
                     </div>
@@ -23,7 +20,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                        <input type="password" name="CardNumber" #CardNumber = "ngModel" [(ngModel)] = "addpay.CardNumber">
+                        <input type="password" name="CardNumber" #CardNumber = "ngModel" [(ngModel)] = "addpay.CardNumber" minlength="12" maxlength="12">
                         <label>Card Number</label>
                     </div>
                     <div class="input-field col s6">

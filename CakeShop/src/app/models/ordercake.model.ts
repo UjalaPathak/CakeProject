@@ -1,11 +1,11 @@
 export class Ordercake {
     orderid!: number;
     cakeid!: number;
-    Name!: string;
-    Address!:string;
-    City!:string;
-    State!: string;
-    Country!:string;
-    Pincode!:string;
-    Phoneno!:string;
+    name!: string;
+    address!:string;
+    city!:string;
+    state!: string;
+    country!:string;
+    pincode!:string;
+    phoneno!:string;
 }

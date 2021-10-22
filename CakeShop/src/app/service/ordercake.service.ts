@@ -21,4 +21,26 @@ export class OrdercakeService {
       })
     })
   }
+
+  getAllOrder():Observable<Ordercake[]>
+  {
+    return this.http.get<Ordercake[]>(this.req,{
+      headers:new HttpHeaders({
+        'Content-Type':'application/json;charset=UTF-8',
+        'Access-Control-Allow-Origin':'*',
+        'Access-Control-Allow-Method':'*'
+      })
+    });
+  }
+
+  deleteOrders(id:number):Observable<any>
+  {
+   return this.http.delete<any>(this.req+"?id="+id,{
+      headers:new HttpHeaders({
+        'Content-Type':'application/json;charset=UTF-8',
+        'Access-Control-Allow-Origin':'*',
+        'Access-Control-Allow-Method':'*'
+      })
+    });
+  }
 }
