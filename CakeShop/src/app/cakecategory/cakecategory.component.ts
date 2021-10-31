@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Admincake } from '../models/admincake.model';
 import { AdmincakeService } from '../service/admincake.service';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { CartService } from '../service/cart.service';
 
 @Component({
   selector: 'app-cakecategory',
@@ -33,12 +34,16 @@ export class CakecategoryComponent implements OnInit {
   };
   category : string | null = "";
 
-  constructor(private cakeService: AdmincakeService, private router: Router, private jwtHelper:JwtHelperService, private route: ActivatedRoute) { }
+  constructor(private cakeService: AdmincakeService, private router: Router, private jwtHelper:JwtHelperService, private route: ActivatedRoute , private cartservice: CartService) { }
  
   ngOnInit(): void {
     this.cakeService.getAllCake().subscribe(data=>
       {
         this.cakecategory=data;
+        this.cakecategory.forEach((a:any)=>{
+          Object.assign(a,{Quantity:1,total:a.price})
+
+        })
         console.log(this.cakecategory);
       }
     );
@@ -72,6 +77,10 @@ export class CakecategoryComponent implements OnInit {
       return false;
     }
   }
+  addtocart(item: any){
+    this. cartservice.addtoCart(item);
+  }
+  
 
   
 

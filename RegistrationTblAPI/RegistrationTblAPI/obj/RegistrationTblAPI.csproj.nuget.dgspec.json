@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\Documents\\Technical_Training\\angular\\CakeShopProject\\RegistrationTblAPI\\RegistrationTblAPI\\RegistrationTblAPI.csproj": {}
+    "D:\\Training\\CakeProject\\RegistrationTblAPI\\RegistrationTblAPI\\RegistrationTblAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\Documents\\Technical_Training\\angular\\CakeShopProject\\RegistrationTblAPI\\RegistrationTblAPI\\RegistrationTblAPI.csproj": {
+    "D:\\Training\\CakeProject\\RegistrationTblAPI\\RegistrationTblAPI\\RegistrationTblAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Documents\\Technical_Training\\angular\\CakeShopProject\\RegistrationTblAPI\\RegistrationTblAPI\\RegistrationTblAPI.csproj",
+        "projectUniqueName": "D:\\Training\\CakeProject\\RegistrationTblAPI\\RegistrationTblAPI\\RegistrationTblAPI.csproj",
         "projectName": "RegistrationTblAPI",
-        "projectPath": "C:\\Users\\Administrator\\Documents\\Technical_Training\\angular\\CakeShopProject\\RegistrationTblAPI\\RegistrationTblAPI\\RegistrationTblAPI.csproj",
+        "projectPath": "D:\\Training\\CakeProject\\RegistrationTblAPI\\RegistrationTblAPI\\RegistrationTblAPI.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Documents\\Technical_Training\\angular\\CakeShopProject\\RegistrationTblAPI\\RegistrationTblAPI\\obj\\",
+        "outputPath": "D:\\Training\\CakeProject\\RegistrationTblAPI\\RegistrationTblAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

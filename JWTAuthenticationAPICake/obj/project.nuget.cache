@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nvEzVCF9sOym73q9Z3l1horCFxDFV9E4Yvj/pVMTwrwmiZow0B2WvKaLBXXf6KDRKaYvJEteET46dT+RN9Rn5g==",
+  "dgSpecHash": "i/6OAcxFaaRwESr3oY1woQwR2XSuVYEemZ4v+12TTjebDrsH3uCCQs+4g0QKHBQsFWjXmmuuFJbV3GgHrPgHGQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrator\\Documents\\Technical_Training\\angular\\CakeShopProject\\JWTAuthenticationAPICake\\JWTAuthenticationAPICake.csproj",
+  "projectFilePath": "D:\\Training\\CakeProject\\JWTAuthenticationAPICake\\JWTAuthenticationAPICake.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\log4net\\2.0.8\\log4net.2.0.8.nupkg.sha512",

@@ -32,6 +32,8 @@ import { AddcakeComponent } from './addcake/addcake.component';
 import { AdminviewcakeComponent } from './adminviewcake/adminviewcake.component';
 import { AdmineditcakeComponent } from './admineditcake/admineditcake.component';
 import { OrderviewComponent } from './orderview/orderview.component';
+import { CartComponent } from './cart/cart.component';
+
 
 
 export function tokenGet() {
@@ -56,7 +58,9 @@ const routes: Routes = [
     AddcakeComponent,
     AdminviewcakeComponent,
     AdmineditcakeComponent,
-    OrderviewComponent
+    OrderviewComponent,
+    CartComponent
+
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { CartService } from '../service/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +9,22 @@ import { JwtHelperService } from '@auth0/angular-jwt';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  public totalitem :number=0
+  
   @Output() toggleSidebarForMe: EventEmitter<any> = new EventEmitter();
 
-  constructor(private router: Router, private jwtHelper:JwtHelperService) { }
+  constructor(private router: Router, private jwtHelper:JwtHelperService,private cartService:CartService) { }
 
   ngOnInit(): void {
+
+    this.cartService.getAllCake()
+    .subscribe(res=>{
+      this.totalitem = res.length;
+
+    })
   }
+
 
   toggleSidebar() {
     this.toggleSidebarForMe.emit();

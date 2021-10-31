@@ -12,6 +12,7 @@
           <img mat-card-image src="{{item.cakepicture}}">
           <mat-card-content>
             <h2>  ₹ {{item.price}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button routerLink="/order/{{item.cakeid}}" class="btn btn-primary" style="background-color:rgb(84, 210, 233) ;">Buy Now</button></h2>
+            <h2><button routerLink="/cart" class="btn btn-primary"    (click)=addtocart(item)>Add to cart</button></h2>
           </mat-card-content>
         </mat-card>
       </div>

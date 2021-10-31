@@ -12,6 +12,11 @@
                     <a routerLink = "/home" *ngIf="IsAuthendicated()" mat-button style="font-size: large;" (click) = "Logout()">Logout</a>
                     <a routerLink = "/login" *ngIf="!IsAuthendicated()" mat-button style="font-size: large;">Login</a>
                     <a routerLink = "/register" *ngIf="!IsAuthendicated()" mat-button style="font-size: large;">Register</a>
+
+                    <button routerLink="/cart" class="btn btn-primary">
+                        <i style="font-size: 20px;" class="fas fa-cart-plus"></i>
+                        <div style="font-size: 8px;" class="badge bg-danger">{{totalitem}}</div>
+                    </button>
                     <!-- <span routerLink = '/register' style="margin-right: 10px; cursor: pointer; padding-top: 20px;">Register</span> -->
                     <!-- <button mat-button [matMenuTriggerFor] = "menu" class="user mt-2 d-flex align-items-center">
                         <img src="../../assets/images/user.png" alt="" class="user-image mr-1 p-2" />

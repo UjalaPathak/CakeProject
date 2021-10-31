@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W2e251aV1b5f2HsvLXnNnpxOJEcIpBiFaE+UU8tWesQykUBOTf9f6/Yk3oojeMVdbBgUENG0AnHHac8hoyil7A==",
+  "dgSpecHash": "ETcsRVmT/FZK9BhMnSfIxJzCJgKqBge1YcX/1UHlXgrqWFGdrCFUZ4cTu08SseBHPOfbPq8b8rpNm/bsi5dKvw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrator\\Documents\\Technical_Training\\angular\\CakeShopProject\\BuyNowtblAPI\\BuyNowtblAPI\\BuyNowtblAPI.csproj",
+  "projectFilePath": "D:\\Training\\CakeProject\\BuyNowtblAPI\\BuyNowtblAPI\\BuyNowtblAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
